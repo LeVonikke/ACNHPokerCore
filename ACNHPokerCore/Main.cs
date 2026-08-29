@@ -10938,18 +10938,6 @@ namespace ACNHPokerCore
         #region Emulator
         private void EmulatorButton_Click(object sender, EventArgs e)
         {
-            if (Utilities.FileCheck(hardwareId))
-            {
-
-            }
-            else
-            {
-                MyCheck checker = new(hardwareId);
-                checker.ShowDialog(this);
-                if (!Utilities.FileCheck(hardwareId))
-                    return;
-            }
-
             if (Utilities.isEmulator)
                 return;
 

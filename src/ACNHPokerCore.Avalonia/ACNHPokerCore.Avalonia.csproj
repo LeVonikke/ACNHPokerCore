@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <AssemblyName>ACNHPokerCore</AssemblyName>
+    <RootNamespace>ACNHPokerCore.Avalonia</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="12.0.0" />
+    <PackageReference Include="Avalonia.Desktop" Version="12.0.0" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="12.0.0" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="12.0.0" />
+    <!--
+      Avalonia.Diagnostics (the in-app dev inspector, F12 at runtime) has not published a
+      12.x release yet as of this writing - only 11.3.20 exists on NuGet, which conflicts
+      with the 12.1.1 packages above. Add it back once an Avalonia.Diagnostics 12.x build
+      is available: PackageReference Include="Avalonia.Diagnostics" Version="matching Avalonia version"
+      Condition="'$(Configuration)' == 'Debug'"
+    -->
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ACNHPokerCore.Core\ACNHPokerCore.Core.csproj" />
+  </ItemGroup>
+
+</Project>

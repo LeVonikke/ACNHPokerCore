@@ -3930,7 +3930,7 @@ namespace ACNHPokerCore.Core
             }
         }
 
-        public static string CheckSysBotBase(Socket socket, USBBot usb)
+        public static string CheckSysBotBase(Socket socket, USBBot? usb)
         {
             lock (botLock)
             {

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D6D66072-F014-4340-824D-4808C3E3BD88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACNHPokerCore.Core", "src\ACNHPokerCore.Core\ACNHPokerCore.Core.csproj", "{50D9A7D4-782E-46AF-BF83-0EA6314F52D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACNHPokerCore.Avalonia", "src\ACNHPokerCore.Avalonia\ACNHPokerCore.Avalonia.csproj", "{93D63B9D-82E2-4534-9D8F-506CFF12012B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50D9A7D4-782E-46AF-BF83-0EA6314F52D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50D9A7D4-782E-46AF-BF83-0EA6314F52D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50D9A7D4-782E-46AF-BF83-0EA6314F52D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50D9A7D4-782E-46AF-BF83-0EA6314F52D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93D63B9D-82E2-4534-9D8F-506CFF12012B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93D63B9D-82E2-4534-9D8F-506CFF12012B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93D63B9D-82E2-4534-9D8F-506CFF12012B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93D63B9D-82E2-4534-9D8F-506CFF12012B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{50D9A7D4-782E-46AF-BF83-0EA6314F52D1} = {D6D66072-F014-4340-824D-4808C3E3BD88}
+		{93D63B9D-82E2-4534-9D8F-506CFF12012B} = {D6D66072-F014-4340-824D-4808C3E3BD88}
+	EndGlobalSection
+EndGlobal

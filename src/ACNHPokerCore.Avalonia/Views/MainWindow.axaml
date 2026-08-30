@@ -1,0 +1,78 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ACNHPokerCore.Avalonia.ViewModels"
+        x:Class="ACNHPokerCore.Avalonia.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Title="ACNHPokerCore (Linux)"
+        Width="1000" Height="650" MinWidth="800" MinHeight="500">
+
+    <Grid RowDefinitions="Auto,*" Margin="10">
+
+        <!-- Connection bar: IP input + connect button, ported from Main.cs
+             StartConnectionButton_Click. This is the one piece of UI that is fully wired
+             up to the real sys-botbase protocol in this session. -->
+        <Border Grid.Row="0" Padding="10" CornerRadius="6" Background="{DynamicResource SystemControlBackgroundBaseLowBrush}" Margin="0,0,0,10">
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <TextBlock Text="Switch IP:" VerticalAlignment="Center" />
+                <TextBox Text="{Binding IpAddress}" Width="160" PlaceholderText="192.168.1.xxx" />
+                <Button Content="Connect" Command="{Binding ConnectCommand}" IsEnabled="{Binding !IsConnected}" />
+                <Button Content="Disconnect" Command="{Binding DisconnectCommand}" IsEnabled="{Binding IsConnected}" />
+                <Ellipse Width="14" Height="14" VerticalAlignment="Center">
+                    <Ellipse.Styles>
+                        <Style Selector="Ellipse">
+                            <Setter Property="Fill" Value="Gray" />
+                        </Style>
+                    </Ellipse.Styles>
+                    <Ellipse.Fill>
+                        <SolidColorBrush Color="{Binding State, Converter={x:Static vm:ConnectionStateToColorConverter.Instance}}" />
+                    </Ellipse.Fill>
+                </Ellipse>
+                <TextBlock Text="{Binding StatusText}" VerticalAlignment="Center" />
+            </StackPanel>
+        </Border>
+
+        <Grid Grid.Row="1" ColumnDefinitions="220,*">
+
+            <!-- Feature launcher buttons, ported layout-wise from the tab/side buttons in
+                 Main.cs (Inventory/Villager/Critter/Other tabs, and the RoadRoller/Dodo/
+                 Map/Bulldozer/Freezer/Chat/Setting/Friendship/Variation launcher buttons).
+                 None of these are wired to real functionality yet - see README TODO. -->
+            <Border Grid.Column="0" Padding="8" CornerRadius="6" Background="{DynamicResource SystemControlBackgroundBaseLowBrush}" Margin="0,0,10,0">
+                <ScrollViewer>
+                    <StackPanel Spacing="6">
+                        <TextBlock Text="Tabs" FontWeight="Bold" Margin="0,0,0,4" />
+                        <Button Content="Inventory" HorizontalAlignment="Stretch" Command="{Binding OpenStubCommand}" CommandParameter="Inventory tab" />
+                        <Button Content="Villager" HorizontalAlignment="Stretch" Command="{Binding OpenStubCommand}" CommandParameter="Villager tab" />
+                        <Button Content="Critter" HorizontalAlignment="Stretch" Command="{Binding OpenStubCommand}" CommandParameter="Critter tab" />
+                        <Button Content="Other" HorizontalAlignment="Stretch" Command="{Binding OpenStubCommand}" CommandParameter="Other tab" />
+
+                        <TextBlock Text="Tools" FontWeight="Bold" Margin="0,10,0,4" />
+                        <Button Content="Map" HorizontalAlignment="Stretch" Command="{Binding OpenStubCommand}" CommandParameter="Map / mini-map" />
+                        <Button Content="Road Roller" HorizontalAlignment="Stretch" Command="{Binding OpenStubCommand}" CommandParameter="Road Roller" />
+                        <Button Content="Bulldozer" HorizontalAlignment="Stretch" Command="{Binding OpenStubCommand}" CommandParameter="Bulldozer" />
+                        <Button Content="Map Regenerator" HorizontalAlignment="Stretch" Command="{Binding OpenStubCommand}" CommandParameter="Map Regenerator" />
+                        <Button Content="Freezer" HorizontalAlignment="Stretch" Command="{Binding OpenStubCommand}" CommandParameter="Freezer" />
+                        <Button Content="Dodo Helper" HorizontalAlignment="Stretch" Command="{Binding OpenStubCommand}" CommandParameter="Dodo Helper" />
+                        <Button Content="Friendship" HorizontalAlignment="Stretch" Command="{Binding OpenStubCommand}" CommandParameter="Friendship" />
+                        <Button Content="Chat" HorizontalAlignment="Stretch" Command="{Binding OpenStubCommand}" CommandParameter="Chat" />
+                        <Button Content="Variation" HorizontalAlignment="Stretch" Command="{Binding OpenStubCommand}" CommandParameter="Variation" />
+                        <Button Content="Settings" HorizontalAlignment="Stretch" Command="{Binding OpenStubCommand}" CommandParameter="Settings" />
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+
+            <!-- Event/error log. Everything Utilities.cs used to push through
+                 MessageBox.Show / MyMessageBox.Show lands here via the Core shim events
+                 (see ViewModels/MainWindowViewModel.cs constructor). -->
+            <Border Grid.Column="1" Padding="8" CornerRadius="6" Background="{DynamicResource SystemControlBackgroundBaseLowBrush}">
+                <Grid RowDefinitions="Auto,*">
+                    <TextBlock Grid.Row="0" Text="Log" FontWeight="Bold" Margin="0,0,0,4" />
+                    <ScrollViewer Grid.Row="1">
+                        <TextBox Text="{Binding LogText}" IsReadOnly="True" AcceptsReturn="True" TextWrapping="Wrap"
+                                 BorderThickness="0" Background="Transparent" FontFamily="monospace" />
+                    </ScrollViewer>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

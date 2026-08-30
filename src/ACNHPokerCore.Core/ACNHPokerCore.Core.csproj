@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>ACNHPokerCore.Core</RootNamespace>
+    <AssemblyName>ACNHPokerCore.Core</AssemblyName>
+    <!--
+      This library must stay free of System.Windows.Forms / System.Drawing.Common /
+      any other GDI+-only or Windows-only UI type. It is referenced by the Avalonia UI
+      project and is meant to also be usable headless (tests, future CLI, etc).
+      Colors/points/rectangles that used to be System.Drawing types are now plain
+      value types in ACNHPokerCore.Core.Geometry, or SkiaSharp types where pixel-level
+      drawing math is unavoidable.
+    -->
+    <NoWarn>CS0168;CS0219;IDE0057</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="LibUsbDotNet" Version="2.2.29" />
+    <PackageReference Include="SkiaSharp" Version="2.88.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!--
+      Item/recipe/flower/variation CSV databases shipped by the original app, read at runtime.
+      NOTE: VillagerDatabase/ (~39MB of .nhv2/.nhvh2 binary villager data) was intentionally
+      NOT copied into this repo yet — it's only needed once the Villager/Friendship screen is
+      ported (see README TODO). Copy it from the upstream repo at that point.
+    -->
+    <None Include="Data\csv\**" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

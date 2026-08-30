@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACNHPokerCore.Core", "src\A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACNHPokerCore.Avalonia", "src\ACNHPokerCore.Avalonia\ACNHPokerCore.Avalonia.csproj", "{93D63B9D-82E2-4534-9D8F-506CFF12012B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C49BAAF8-82C6-4FEB-9A66-5B24D3851BE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACNHPokerCore.Core.Tests", "tests\ACNHPokerCore.Core.Tests\ACNHPokerCore.Core.Tests.csproj", "{CE737748-92DB-4874-A306-3462DA82DA84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,9 +30,14 @@ Global
 		{93D63B9D-82E2-4534-9D8F-506CFF12012B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93D63B9D-82E2-4534-9D8F-506CFF12012B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93D63B9D-82E2-4534-9D8F-506CFF12012B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE737748-92DB-4874-A306-3462DA82DA84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE737748-92DB-4874-A306-3462DA82DA84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE737748-92DB-4874-A306-3462DA82DA84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE737748-92DB-4874-A306-3462DA82DA84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{50D9A7D4-782E-46AF-BF83-0EA6314F52D1} = {D6D66072-F014-4340-824D-4808C3E3BD88}
 		{93D63B9D-82E2-4534-9D8F-506CFF12012B} = {D6D66072-F014-4340-824D-4808C3E3BD88}
+		{CE737748-92DB-4874-A306-3462DA82DA84} = {C49BAAF8-82C6-4FEB-9A66-5B24D3851BE4}
 	EndGlobalSection
 EndGlobal

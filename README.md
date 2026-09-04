@@ -1,3 +1,12 @@
+## Este fork
+
+Fork local de [MyShiLingStar/ACNHPokerCore](https://github.com/MyShiLingStar/ACNHPokerCore).
+
+| branch | conteúdo |
+|---|---|
+| `main` | original WinForms, com a trava de HWID/licença (`MyCheck`) removida — resto sem modificação |
+| `avalonia` | reescrita cross-platform em andamento: `src/ACNHPokerCore.Core` (lógica pura, sem UI) + `src/ACNHPokerCore.Avalonia` (UI Avalonia) + `tests/` — ver o README dessa branch pro estado detalhado |
+
 ## You can find the latest version of ACNHPokerCore : [🢧 Here 🢦](https://myshilingstar.github.io/GetAzure/)
 ## You can find the latest x64 .NET 9.0 Desktop Runtime [🢧 Here 🢦](https://aka.ms/dotnet-core-applaunch?framework=Microsoft.WindowsDesktop.App&framework_version=9.0.0&arch=x64&rid=win10-x64&gui=true)
 

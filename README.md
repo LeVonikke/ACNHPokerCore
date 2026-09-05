@@ -1,13 +1,13 @@
-## Este fork
+## This fork
 
-![C#](https://img.shields.io/badge/C%23-blue) ![Status](https://img.shields.io/badge/status-ativo-brightgreen) ![Privado](https://img.shields.io/badge/-privado-grey) ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
+![C#](https://img.shields.io/badge/C%23-blue) ![Status](https://img.shields.io/badge/status-active-brightgreen) ![Private](https://img.shields.io/badge/-private-grey) ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
 
-Fork local de [MyShiLingStar/ACNHPokerCore](https://github.com/MyShiLingStar/ACNHPokerCore).
+Local fork of [MyShiLingStar/ACNHPokerCore](https://github.com/MyShiLingStar/ACNHPokerCore).
 
-| branch | conteúdo |
+| branch | content |
 |---|---|
-| `main` | original WinForms, com a trava de HWID/licença (`MyCheck`) removida — resto sem modificação |
-| `avalonia` | reescrita cross-platform em andamento: `src/ACNHPokerCore.Core` (lógica pura, sem UI) + `src/ACNHPokerCore.Avalonia` (UI Avalonia) + `tests/` — ver o README dessa branch pro estado detalhado |
+| `main` | original WinForms, with the HWID/license check (`MyCheck`) removed — rest unmodified |
+| `avalonia` | cross-platform rewrite in progress: `src/ACNHPokerCore.Core` (pure logic, no UI) + `src/ACNHPokerCore.Avalonia` (Avalonia UI) + `tests/` — see that branch's README for the detailed state |
 
 ## You can find the latest version of ACNHPokerCore : [🢧 Here 🢦](https://myshilingstar.github.io/GetAzure/)
 ## You can find the latest x64 .NET 9.0 Desktop Runtime [🢧 Here 🢦](https://aka.ms/dotnet-core-applaunch?framework=Microsoft.WindowsDesktop.App&framework_version=9.0.0&arch=x64&rid=win10-x64&gui=true)

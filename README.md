@@ -1,6 +1,6 @@
 ## This fork
 
-![C#](https://img.shields.io/badge/C%23-blue) ![Status](https://img.shields.io/badge/status-active-brightgreen) ![Private](https://img.shields.io/badge/-private-grey) ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
+![C#](https://img.shields.io/badge/C%23-blue) ![Status](https://img.shields.io/badge/status-active-brightgreen) ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
 
 Local fork of [MyShiLingStar/ACNHPokerCore](https://github.com/MyShiLingStar/ACNHPokerCore).
 
